@@ -1,11 +1,14 @@
-name: CI
+name: Test Python health check
 
 on: [push]
 
 jobs:
-  check-readme:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Show README
-        run: cat README.md
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run tests
+        run: python -m unittest -v
