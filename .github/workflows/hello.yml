@@ -12,3 +12,5 @@ jobs:
           python-version: '3.12'
       - name: Run tests
         run: python -m unittest -v
+      - name: Build Docker image
+        run: docker build -t cicd-learning:ci .
