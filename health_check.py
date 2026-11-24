@@ -1,2 +1,2 @@
 def is_healthy(status_code):
-    return False
+    return 200 <= status_code < 300
