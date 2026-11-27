@@ -1,0 +1,8 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/wangmingle963/cicd-learning
+  tag: e9e7406f32d78dd0e3cb085c8abea8bfa7571858
+
+service:
+  port: 8000
